@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "bb-application-frontend",
   "version": "0.1.0",
   "author": "Rob Alonzi",
   "private": true,
@@ -9,9 +9,6 @@
     "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.2.5",
     "@mui/material": "^5.2.6",
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
     "axios": "^0.24.0",
     "clsx": "^1.1.1",
     "luxon": "^2.2.0",

@@ -9,6 +9,9 @@ const theme = createTheme({
     primary: {
       main: COLORS.TEXT_PRIMARY
     },
+    gray: {
+      main: COLORS.GRAY,
+    },
     gold: {
       main: COLORS.GOLD,
     }

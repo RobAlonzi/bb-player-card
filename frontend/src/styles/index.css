@@ -1,0 +1,11 @@
+:root {
+  --main-bg-color: #F6F7F9;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+#root {
+  background-color: var(--main-bg-color);
+}
