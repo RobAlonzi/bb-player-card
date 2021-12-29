@@ -9,6 +9,7 @@ function PlayerImage({ playerId }) {
       style={{ border: `2px solid ${COLORS.GOLD}`, height: 135 }}
       src={URL}
       loading="lazy"
+      alt={`player ${playerId}`}
     />
   )
 }

@@ -64,7 +64,7 @@ export function groupSavesByType(events, playerId) {
 
   return Object.entries(shots).map(([key, value]) => ({
     type: key,
-    ['Save Pct']: value.saves / (value.saves + value.goals)
+    'Save Pct': value.saves / (value.saves + value.goals)
   }))
 }
 

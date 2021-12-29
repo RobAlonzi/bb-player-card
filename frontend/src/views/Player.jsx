@@ -7,7 +7,6 @@ import PaddedGrid from '@/components/Common/PaddedGrid';
 import PlayerCardHeader from '@/components/PlayerCardHeader';
 import PlayerCardTabs, { TabPanel } from '@/components/PlayerCardTabs';
 import PlayerStatsOverview from '@/components/PlayerStatsOverview';
-import PlayerSplits from '@/components/PlayerSplits';
 import PlayerEvents from '@/components/PlayerEvents';
 import PlayerShifts from '@/components/PlayerShifts';
 
