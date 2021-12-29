@@ -19,7 +19,6 @@ function PlayerCardTabs({ value, onTabChange }) {
     <Box sx={styles}>
       <Tabs value={value} onChange={handleChange} >
         <Tab label="Overview" />
-        <Tab label="Splits" />
         <Tab label="Events" />
         <Tab label="Shifts" />
       </Tabs>

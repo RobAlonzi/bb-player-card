@@ -29,12 +29,9 @@ function Player() {
             <PlayerStatsOverview playerId={id} />
           </TabPanel>
           <TabPanel value={tabValue} index={1}>
-            <PlayerSplits playerId={id} />
-          </TabPanel>
-          <TabPanel value={tabValue} index={2}>
             <PlayerEvents playerId={id} />
           </TabPanel>
-          <TabPanel value={tabValue} index={3}>
+          <TabPanel value={tabValue} index={2}>
             <PlayerShifts playerId={id} />
           </TabPanel>
         </PaddedGrid>

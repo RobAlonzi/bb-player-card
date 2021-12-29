@@ -2,10 +2,11 @@
   --main-bg-color: #F6F7F9;
 }
 
-html, body, #root {
+html, body {
   height: 100%;
 }
 
 #root {
+  min-height: 100%;
   background-color: var(--main-bg-color);
 }

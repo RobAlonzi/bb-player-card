@@ -3,4 +3,5 @@ export const COLORS = {
   GOLD: '#FFB81C',
   TEXT_PRIMARY: '#41474F',
   GRAY: '#F6F7F9',
+  GRAY_BORDER: '#CECECE'
 }

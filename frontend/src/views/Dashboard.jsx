@@ -1,14 +1,12 @@
 import React from 'react';
-import Container from '@/components/Container';
+import { Navigate } from 'react-router-dom';
+import URLS from '@/views/urls';
+
+
 
 function Dashboard() {
-  return (
-    <Container>
-      <div>
-        Dashboard!
-      </div>
-    </Container>
-  )
+  // If only I had more time for a Dashboard
+  return <Navigate replace to={`/${URLS.PLAYERS}/8470638`} />
 }
 
 

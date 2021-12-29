@@ -12,7 +12,6 @@ function AppContainer({ children }) {
   const navigate = useNavigate();
 
   function handlePlayerSearch(option) {
-    console.log(option)
     navigate(`/${URLS.PLAYERS}/${option.id}`)
   }
 
