@@ -9,7 +9,7 @@ The backend is written in Flask/Python.  It contains a couple of useful endpoint
 ### Backend Quick Start
 1. First validate that you've installed Python &gt;=3.4 and pip
 2. Install the requirements in backend/requirements.txt, including flask
-3. To start a development server, run "flask start".  To run in debug mode (automatically refresh on code changes), run "FLASK_DEBUG=1 flask run"
+3. To start a development server, run "flask run".  To run in debug mode (automatically refresh on code changes), run "FLASK_DEBUG=1 flask run"
 
 ## Frontend
 The frontend is written in React/Javascript. It is bootstrapped with the popular [Create React App](https://github.com/facebook/create-react-app) scaffolding.
