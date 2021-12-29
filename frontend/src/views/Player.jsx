@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import Grid from '@mui/material/Grid';
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import Grid from "@mui/material/Grid";
 
-import Container from '@/components/Container';
-import PaddedGrid from '@/components/Common/PaddedGrid';
-import PlayerCardHeader from '@/components/PlayerCardHeader';
-import PlayerCardTabs, { TabPanel } from '@/components/PlayerCardTabs';
-import PlayerStatsOverview from '@/components/PlayerStatsOverview';
-import PlayerEvents from '@/components/PlayerEvents';
-import PlayerShifts from '@/components/PlayerShifts';
+import Container from "@/components/Container";
+import PaddedGrid from "@/components/Common/PaddedGrid";
+import PlayerCardHeader from "@/components/PlayerCardHeader";
+import PlayerCardTabs, { TabPanel } from "@/components/PlayerCardTabs";
+import PlayerStatsOverview from "@/components/PlayerStatsOverview";
+import PlayerEvents from "@/components/PlayerEvents";
+import PlayerShifts from "@/components/PlayerShifts";
 
 function Player() {
   const { id } = useParams();
@@ -36,8 +36,7 @@ function Player() {
         </PaddedGrid>
       </Grid>
     </Container>
-  )
+  );
 }
-
 
 export default Player;

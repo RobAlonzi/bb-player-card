@@ -1,17 +1,16 @@
-import React from 'react';
-import { useQuery } from 'react-query';
-import Grid from '@mui/material/Grid';
+import React from "react";
+import { useQuery } from "react-query";
+import Grid from "@mui/material/Grid";
 
-import BasicInfo from './BasicInfo';
-import AdditionalInfo from './AdditionalInfo';
-import { getPlayerVitals } from '@/data';
-
+import BasicInfo from "./BasicInfo";
+import AdditionalInfo from "./AdditionalInfo";
+import { getPlayerVitals } from "@/data";
 
 function PlayerCardHeader({ playerId }) {
   const { data, isLoading } = useQuery({
-    queryKey: ['player-vitals', playerId],
-    queryFn: () => getPlayerVitals(playerId)
-  })
+    queryKey: ["player-vitals", playerId],
+    queryFn: () => getPlayerVitals(playerId),
+  });
 
   return (
     <Grid container alignItems="center">
@@ -22,8 +21,7 @@ function PlayerCardHeader({ playerId }) {
         <AdditionalInfo data={data} isLoading={isLoading} />
       </Grid>
     </Grid>
-  )
+  );
 }
-
 
 export default PlayerCardHeader;

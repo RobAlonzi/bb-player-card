@@ -1,21 +1,21 @@
-import React from 'react';
-import { useQuery } from 'react-query';
-import Grid from '@mui/material/Grid';
+import React from "react";
+import { useQuery } from "react-query";
+import Grid from "@mui/material/Grid";
 
-import { getPlayerEvents } from '@/data';
-import Placeholder from '@/components/Common/Placeholder';
-import InformationBlock from '@/components/Common/InformationBlock';
-import EventsByType from './EventsByType';
-import ShotsByType from './ShotsByType';
-import SavesByType from './SavesByType';
-import PenaltiesByType from './PenaltiesByType';
-import EventLog from './EventLog';
+import { getPlayerEvents } from "@/data";
+import Placeholder from "@/components/Common/Placeholder";
+import InformationBlock from "@/components/Common/InformationBlock";
+import EventsByType from "./EventsByType";
+import ShotsByType from "./ShotsByType";
+import SavesByType from "./SavesByType";
+import PenaltiesByType from "./PenaltiesByType";
+import EventLog from "./EventLog";
 
 function PlayerEvents({ playerId }) {
   const { data: { events, position } = {}, isLoading } = useQuery({
-    queryKey: ['player-events', playerId],
-    queryFn: () => getPlayerEvents(playerId)
-  })
+    queryKey: ["player-events", playerId],
+    queryFn: () => getPlayerEvents(playerId),
+  });
 
   return (
     <Grid container spacing={4}>
@@ -27,9 +27,15 @@ function PlayerEvents({ playerId }) {
         </InformationBlock>
       </Grid>
       <Grid item xs={6}>
-        <InformationBlock title={`${position === 'G' ? 'Save Pct' : 'Shots'} by Type`}>
+        <InformationBlock
+          title={`${position === "G" ? "Save Pct" : "Shots"} by Type`}
+        >
           <Placeholder ready={!isLoading} variant="rectangular" height={200}>
-            { position === 'G' ? <SavesByType playerId={playerId} events={events} /> : <ShotsByType playerId={playerId} events={events} /> }
+            {position === "G" ? (
+              <SavesByType playerId={playerId} events={events} />
+            ) : (
+              <ShotsByType playerId={playerId} events={events} />
+            )}
           </Placeholder>
         </InformationBlock>
       </Grid>
@@ -48,8 +54,7 @@ function PlayerEvents({ playerId }) {
         </InformationBlock>
       </Grid>
     </Grid>
-  )
+  );
 }
-
 
 export default PlayerEvents;

@@ -1,19 +1,20 @@
-import React from 'react';
-import { useQuery } from 'react-query';
-import Grid from '@mui/material/Grid';
+import React from "react";
+import { useQuery } from "react-query";
+import Grid from "@mui/material/Grid";
 
-import { getPlayerStats } from '@/data';
-import Placeholder from '@/components/Common/Placeholder';
-import InformationBlock from '@/components/Common/InformationBlock';
-import BasicStats from './BasicStats';
-import GameLog from './GameLog';
-import CareerStats from './CareerStats';
+import { getPlayerStats } from "@/data";
+import Placeholder from "@/components/Common/Placeholder";
+import InformationBlock from "@/components/Common/InformationBlock";
+import BasicStats from "./BasicStats";
+import GameLog from "./GameLog";
+import CareerStats from "./CareerStats";
 
 function PlayerStatsOverview({ playerId }) {
-  const { data: { gamelog, career, season = {}, position } = {}, isLoading } = useQuery({
-    queryKey: ['player-stats-overview', playerId],
-    queryFn: () => getPlayerStats(playerId)
-  })
+  const { data: { gamelog, career, season = {}, position } = {}, isLoading } =
+    useQuery({
+      queryKey: ["player-stats-overview", playerId],
+      queryFn: () => getPlayerStats(playerId),
+    });
 
   return (
     <Grid container spacing={4}>
@@ -39,8 +40,7 @@ function PlayerStatsOverview({ playerId }) {
         </InformationBlock>
       </Grid>
     </Grid>
-  )
+  );
 }
-
 
 export default PlayerStatsOverview;

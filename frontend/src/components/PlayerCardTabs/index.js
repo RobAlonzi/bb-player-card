@@ -1,4 +1,4 @@
-import PlayerCardTabs from './PlayerCardTabs';
+import PlayerCardTabs from "./PlayerCardTabs";
 
-export * from './TabPanel';
+export * from "./TabPanel";
 export default PlayerCardTabs;

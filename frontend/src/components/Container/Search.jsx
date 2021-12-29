@@ -1,39 +1,37 @@
-import React from 'react';
-import { components } from 'react-select';
-import Select from 'react-select/async';
-import SearchIcon from '@mui/icons-material/Search';
-import Box from '@mui/material/Box'
+import React from "react";
+import { components } from "react-select";
+import Select from "react-select/async";
+import SearchIcon from "@mui/icons-material/Search";
+import Box from "@mui/material/Box";
 
-import { searchForPlayer } from '@/data';
-import { debounce } from '@/util';
-
+import { searchForPlayer } from "@/data";
+import { debounce } from "@/util";
 
 const selectStyle = {
   control: (provided) => ({
     ...provided,
-    background: 'inherit',
-    borderRadius: '5px',
-    cursor: 'pointer',
+    background: "inherit",
+    borderRadius: "5px",
+    cursor: "pointer",
   }),
   indicatorSeparator: () => ({
-    display: 'none',
+    display: "none",
   }),
   placeholder: (provided) => ({
     ...provided,
-    color: '#FFF',
+    color: "#FFF",
   }),
   input: (provided) => ({
     ...provided,
-    color: '#FFF',
+    color: "#FFF",
   }),
   option: (provided) => ({
     ...provided,
-    color: '#000',
+    color: "#000",
   }),
 };
 
-
-const DropdownIndicator = props => {
+const DropdownIndicator = (props) => {
   return (
     <components.DropdownIndicator {...props}>
       <SearchIcon />
@@ -46,7 +44,7 @@ function MainSearch({ onPlayerSearch }) {
     const result = await searchForPlayer(input);
     callback(result);
   }
-  
+
   return (
     <Box width={250}>
       <Select
@@ -61,7 +59,7 @@ function MainSearch({ onPlayerSearch }) {
         value={null}
       />
     </Box>
-  )
+  );
 }
 
 export default MainSearch;

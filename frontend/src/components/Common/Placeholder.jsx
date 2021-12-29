@@ -1,13 +1,12 @@
-import React from 'react';
-import Skeleton from '@mui/material/Skeleton';
+import React from "react";
+import Skeleton from "@mui/material/Skeleton";
 
-function Placeholder({ children, ready, ...props}) {
-  if(ready) {
+function Placeholder({ children, ready, ...props }) {
+  if (ready) {
     return children;
   }
 
-  return <Skeleton {...props} />
+  return <Skeleton {...props} />;
 }
-
 
 export default Placeholder;

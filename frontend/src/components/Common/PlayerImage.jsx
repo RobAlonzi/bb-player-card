@@ -1,8 +1,8 @@
-import React from 'react';
-import { COLORS } from '@/styles/colors';
+import React from "react";
+import { COLORS } from "@/styles/colors";
 
 function PlayerImage({ playerId }) {
-  const URL = `https://cms.nhl.bamgrid.com/images/headshots/current/168x168/${playerId}.jpg`
+  const URL = `https://cms.nhl.bamgrid.com/images/headshots/current/168x168/${playerId}.jpg`;
 
   return (
     <img
@@ -11,8 +11,7 @@ function PlayerImage({ playerId }) {
       loading="lazy"
       alt={`player ${playerId}`}
     />
-  )
+  );
 }
-
 
 export default PlayerImage;

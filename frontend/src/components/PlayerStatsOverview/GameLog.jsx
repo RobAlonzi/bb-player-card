@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import TablePagination from '@mui/material/TablePagination';
-
+import React, { useState } from "react";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import TablePagination from "@mui/material/TablePagination";
 
 function PlayerTableHeaderCells() {
   return (
@@ -23,7 +22,7 @@ function PlayerTableHeaderCells() {
       <TableCell align="right">Hits</TableCell>
       <TableCell align="right">Blocks</TableCell>
     </>
-  )
+  );
 }
 
 function GoalieTableHeaderCells() {
@@ -40,7 +39,7 @@ function GoalieTableHeaderCells() {
       <TableCell align="right">Pct</TableCell>
       <TableCell align="right">GA</TableCell>
     </>
-  )
+  );
 }
 
 function PlayerTableBodyCells({ row }) {
@@ -60,7 +59,7 @@ function PlayerTableBodyCells({ row }) {
       <TableCell align="right">{row.stat.hits}</TableCell>
       <TableCell align="right">{row.stat.blocked}</TableCell>
     </>
-  )
+  );
 }
 
 function GoalieTableBodyCells({ row }) {
@@ -79,7 +78,7 @@ function GoalieTableBodyCells({ row }) {
       <TableCell align="right">{row.stat.savePercentage}</TableCell>
       <TableCell align="right">{row.stat.goalsAgainst}</TableCell>
     </>
-  )
+  );
 }
 
 function GameLog({ logs, position }) {
@@ -95,16 +94,24 @@ function GameLog({ logs, position }) {
         <Table sx={{ minWidth: 650 }} aria-label="game log table" size="small">
           <TableHead>
             <TableRow>
-              { position === 'G' ? <GoalieTableHeaderCells /> : <PlayerTableHeaderCells /> }
+              {position === "G" ? (
+                <GoalieTableHeaderCells />
+              ) : (
+                <PlayerTableHeaderCells />
+              )}
             </TableRow>
           </TableHead>
           <TableBody>
             {logs.slice(page * 10, page * 10 + 10).map((row) => (
               <TableRow
                 key={row.date}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
-                { position === 'G' ? <GoalieTableBodyCells row={row} /> : <PlayerTableBodyCells row={row} /> }
+                {position === "G" ? (
+                  <GoalieTableBodyCells row={row} />
+                ) : (
+                  <PlayerTableBodyCells row={row} />
+                )}
               </TableRow>
             ))}
           </TableBody>

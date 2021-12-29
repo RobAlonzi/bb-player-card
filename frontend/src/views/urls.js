@@ -1,5 +1,5 @@
 const URLS = {
-  PLAYERS: 'players'
-}
+  PLAYERS: "players",
+};
 
 export default URLS;

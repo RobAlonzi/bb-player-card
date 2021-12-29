@@ -1,12 +1,12 @@
-import React from 'react';
-import Grid from '@mui/material/Grid';
+import React from "react";
+import Grid from "@mui/material/Grid";
 
-import BasicStat from '@/components/Common/BasicStat';
+import BasicStat from "@/components/Common/BasicStat";
 
 function PlayerStatsOverviewBasic({ stats, position }) {
-  const IS_GOALIE = position === 'G';
-  
-  if(!stats) {
+  const IS_GOALIE = position === "G";
+
+  if (!stats) {
     return null;
   }
 
@@ -16,49 +16,111 @@ function PlayerStatsOverviewBasic({ stats, position }) {
         <BasicStat title="Games Played" value={stats.games} />
       </Grid>
       <Grid item xs={2}>
-        { IS_GOALIE ? <BasicStat title="Games Started" value={stats.gamesStarted} /> : <BasicStat title="Goals" value={stats.goals} /> }
+        {IS_GOALIE ? (
+          <BasicStat title="Games Started" value={stats.gamesStarted} />
+        ) : (
+          <BasicStat title="Goals" value={stats.goals} />
+        )}
       </Grid>
       <Grid item xs={2}>
-        { IS_GOALIE ? <BasicStat title="Record" value={`${stats.wins}-${stats.losses}-${stats.ot}`} /> : <BasicStat title="Assists" value={stats.assists} /> }
+        {IS_GOALIE ? (
+          <BasicStat
+            title="Record"
+            value={`${stats.wins}-${stats.losses}-${stats.ot}`}
+          />
+        ) : (
+          <BasicStat title="Assists" value={stats.assists} />
+        )}
       </Grid>
       <Grid item xs={2}>
-        { IS_GOALIE ? <BasicStat title="GAA" value={stats.goalAgainstAverage.toFixed(2)} /> : <BasicStat title="PIM" value={stats.pim} /> }
+        {IS_GOALIE ? (
+          <BasicStat title="GAA" value={stats.goalAgainstAverage.toFixed(2)} />
+        ) : (
+          <BasicStat title="PIM" value={stats.pim} />
+        )}
       </Grid>
       <Grid item xs={2}>
-        { IS_GOALIE ? <BasicStat title="SV%" value={stats.savePercentage} /> : <BasicStat title="+/-" value={stats.plusMinus} /> }
+        {IS_GOALIE ? (
+          <BasicStat title="SV%" value={stats.savePercentage} />
+        ) : (
+          <BasicStat title="+/-" value={stats.plusMinus} />
+        )}
       </Grid>
       <Grid item xs={2}>
-        { IS_GOALIE ? <BasicStat title="SO" value={stats.shutouts} /> : <BasicStat title="TOI/G" value={stats.timeOnIcePerGame} /> }
+        {IS_GOALIE ? (
+          <BasicStat title="SO" value={stats.shutouts} />
+        ) : (
+          <BasicStat title="TOI/G" value={stats.timeOnIcePerGame} />
+        )}
       </Grid>
       <Grid item xs={2}>
-        { IS_GOALIE ? <BasicStat title="Shots Against" value={stats.shotsAgainst} /> : <BasicStat title="Shots" value={stats.shots} /> }
+        {IS_GOALIE ? (
+          <BasicStat title="Shots Against" value={stats.shotsAgainst} />
+        ) : (
+          <BasicStat title="Shots" value={stats.shots} />
+        )}
       </Grid>
       <Grid item xs={2}>
-        { IS_GOALIE ? <BasicStat title="Saves" value={stats.saves} /> : <BasicStat title="Shot %" value={stats.shotPct} /> }
+        {IS_GOALIE ? (
+          <BasicStat title="Saves" value={stats.saves} />
+        ) : (
+          <BasicStat title="Shot %" value={stats.shotPct} />
+        )}
       </Grid>
       <Grid item xs={2}>
-        { IS_GOALIE ? <BasicStat title="EV SV%" value={(stats.evenStrengthSavePercentage / 100).toFixed(3)} /> : <BasicStat title="Hits" value={stats.hits} /> }
+        {IS_GOALIE ? (
+          <BasicStat
+            title="EV SV%"
+            value={(stats.evenStrengthSavePercentage / 100).toFixed(3)}
+          />
+        ) : (
+          <BasicStat title="Hits" value={stats.hits} />
+        )}
       </Grid>
       <Grid item xs={2}>
-        { IS_GOALIE ? <BasicStat title="SH SV%" value={(stats.shortHandedSavePercentage / 100).toFixed(3)} /> : <BasicStat title="Blocked" value={stats.blocked} /> }
+        {IS_GOALIE ? (
+          <BasicStat
+            title="SH SV%"
+            value={(stats.shortHandedSavePercentage / 100).toFixed(3)}
+          />
+        ) : (
+          <BasicStat title="Blocked" value={stats.blocked} />
+        )}
       </Grid>
       <Grid item xs={2}>
-        { IS_GOALIE ? <BasicStat title="PP SV%" value={(stats.powerPlaySavePercentage / 100).toFixed(3)} /> : <BasicStat title="FO %" value={stats.faceOffPct} /> }
+        {IS_GOALIE ? (
+          <BasicStat
+            title="PP SV%"
+            value={(stats.powerPlaySavePercentage / 100).toFixed(3)}
+          />
+        ) : (
+          <BasicStat title="FO %" value={stats.faceOffPct} />
+        )}
       </Grid>
       <Grid item xs={2}>
-        { IS_GOALIE ? <BasicStat title="TOI" value={stats.timeOnIce} /> : <BasicStat title="GWG" value={stats.gameWinningGoals} /> }
+        {IS_GOALIE ? (
+          <BasicStat title="TOI" value={stats.timeOnIce} />
+        ) : (
+          <BasicStat title="GWG" value={stats.gameWinningGoals} />
+        )}
       </Grid>
-      
+
       {!IS_GOALIE && (
         <>
           <Grid item xs={2}>
-            <BasicStat title="PP TOI/G" value={stats.powerPlayTimeOnIcePerGame} />
+            <BasicStat
+              title="PP TOI/G"
+              value={stats.powerPlayTimeOnIcePerGame}
+            />
           </Grid>
           <Grid item xs={2}>
             <BasicStat title="PPP" value={stats.powerPlayPoints} />
           </Grid>
           <Grid item xs={2}>
-            <BasicStat title="SH TOI/G" value={stats.shortHandedTimeOnIcePerGame} />
+            <BasicStat
+              title="SH TOI/G"
+              value={stats.shortHandedTimeOnIcePerGame}
+            />
           </Grid>
           <Grid item xs={2}>
             <BasicStat title="SHP" value={stats.shortHandedPoints} />
@@ -72,8 +134,7 @@ function PlayerStatsOverviewBasic({ stats, position }) {
         </>
       )}
     </Grid>
-  )
+  );
 }
-
 
 export default PlayerStatsOverviewBasic;

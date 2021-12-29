@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import TablePagination from '@mui/material/TablePagination';
+import React, { useState } from "react";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import TablePagination from "@mui/material/TablePagination";
 
-import { formatEventForLog } from './util';
-
+import { formatEventForLog } from "./util";
 
 function PlayerTableHeaderCells() {
   return (
@@ -23,7 +22,7 @@ function PlayerTableHeaderCells() {
       <TableCell align="right">Secondary Type</TableCell>
       <TableCell align="right">Description</TableCell>
     </>
-  )
+  );
 }
 
 function PlayerTableBodyCells({ row }) {
@@ -40,9 +39,8 @@ function PlayerTableBodyCells({ row }) {
       <TableCell align="right">{event.secondaryType}</TableCell>
       <TableCell align="right">{event.description}</TableCell>
     </>
-  )
+  );
 }
-
 
 function EventLog({ events }) {
   const [page, setPage] = useState(0);
@@ -64,7 +62,7 @@ function EventLog({ events }) {
             {events.slice(page * 10, page * 10 + 10).map((row) => (
               <TableRow
                 key={row.event.result.eventCode}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <PlayerTableBodyCells row={row} />
               </TableRow>

@@ -1,11 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import theme from '@/styles/theme';
-import Routes from '@/views/Routes';
-import '@/styles/index.css';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import theme from "@/styles/theme";
+import Routes from "@/views/Routes";
+import "@/styles/index.css";
 
 const queryClient = new QueryClient();
 

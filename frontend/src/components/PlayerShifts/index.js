@@ -1,4 +1,4 @@
 import PlayerShifts from "./PlayerShifts";
 
-export * from './util';
+export * from "./util";
 export default PlayerShifts;

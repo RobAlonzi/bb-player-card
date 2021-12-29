@@ -1,8 +1,9 @@
 :root {
-  --main-bg-color: #F6F7F9;
+  --main-bg-color: #f6f7f9;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
