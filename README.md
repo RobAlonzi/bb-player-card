@@ -65,7 +65,8 @@ Other things, from a direct tech / housekeeping perspective:
  - Optimize some of the backend calls. In certain areas I make a few calls just to get just a small sliver of data from the result. There may be opportunity for optimization.
  - Clear up some backend code. In some areas what I am trying to achieve might be confusing for another developer or myself in a few months. Adding comments or abstracting certain logic into another function might make it easier for readability.
  - Some components in the frontend are not very DRY. I noticed writing similar code in a few places. Could be a sign that there is an opportunity for abstraction.
- - Instead of always pulling from the NHL API, add ability to store certain data that needs more processing from our end into our own database, so speed up query time. 
+ - Instead of always pulling from the NHL API, add ability to store certain data that needs more processing from our end into our own database, so speed up query time.
+ - Design for edge cases. When APIs fail, what happens? Players who are just drafted but have yet to play a game are available to be searched but their stats are empty, causing a bad experience. We should fix that.
  
 Finally, just generally would find it helpful to speak / interact with the people who would be using this app. What data is important to them? How do they use the data? If we don't have a certain bit of data, can we get it? What are the pain points of the current solution? I think speaking to your users can open your eyes to what features to prioritize. I've been in situations where something trivial to implement on the development side is causing a lot of frustration for the users, but was never addressed because we didn't use the app in the same way. I am not the subject matter expert, but I can help these people achieve what they need in a shorter amount of time with tools I can provide. 
 
