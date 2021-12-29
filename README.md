@@ -57,7 +57,7 @@ A number of things can be done to improve the submission. I have pulled a pretty
  - Other external data sources. It would be possible to scrape CapFriendly for contract information, but that is a big job in of itself. It would also be possible to use the shift data to determine who the player plays with/against most often. But again, I would need to match up the shift start/end times with other player shift data and it quickly became a much bigger task than the time allotted. 
  - More goalie info. I am sure goals by location / type would be valuable. As I described above, I would likely map it on a rink using the x/y coordinates given to us by the event data.
  - Sorting / Filtering on the tables. Adding some sorting / filtering on the tables would give the user a much easier time to dig into the data and find exactly what they are looking for.
- - The app can be expanded to show `Team` and `Game` pages as well if you want to dig into certain teams or games instead of just a specific player.
+ - The app can be expanded to show `Team` and `Game` pages as well if you want to dig into certain teams or games instead of just a specific player. Also, a dashboard of some kind would be helpful.
 
 
 Other things, from a direct tech / housekeeping perspective:
